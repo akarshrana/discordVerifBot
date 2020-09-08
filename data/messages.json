@@ -1,0 +1,9 @@
+{
+     "refresh": "Okay, refreshed and ready\nDon't confuse me by sending refresh again",
+     "addRoleFail": "Hey there! I was trying to assign you your branch and year role but failed, probably because I know too less about you.\nYou can get your role by sending an easy command in the bot-commands channel. The command is !assign YYBB where YYBB is the initial four characters of your roll number. For example, if you're 20CS01001 you can send !assign 20CS . Please remember that 20cs/20Cs/20cS will all be invalid. I'm a little busy right now will open the bot-commands channel after 10-15 minutes, please try ONLY when it is open, do not reply here.",
+     "verifFail": "Verification failed, You forgot to fill the google form, Didn't you?\nIf you filled it try using the !refresh command and wait for 2 minutes before trying again. Check the pinned messages in this channel for more help",
+     "addRoleSuccess": "Hey there! I've assigned you your branch and year roles.",
+     "verifSuccess": "Verification succesfull! Welcome to the gang!",
+     "keyMismatch": "Nah! Keys don't match. Remember that 'a' and 'A' are different for me. Check the pinned messages in this channel for more help.",
+     "yohooman": "Yo Hooman! Imma look you up in the database, give me a sec"
+}

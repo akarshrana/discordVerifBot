@@ -1,0 +1,9 @@
+# Local Tests
+tests
+
+# Node Modules
+node_modules
+
+# Config Vars
+*.env
+keys.json

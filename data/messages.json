@@ -4,6 +4,6 @@
      "verifFail": "Verification failed, You forgot to fill the google form, Didn't you?\nIf you filled it try using the !refresh command and wait for 2 minutes before trying again. Check the pinned messages in this channel for more help",
      "addRoleSuccess": "Hey there! I've assigned you your branch and year roles.",
      "verifSuccess": "Verification succesfull! Welcome to the gang!",
-     "keyMismatch": "Nah! Keys don't match. Remember that 'a' and 'A' are different for me. Check the pinned messages in this channel for more help.",
+     "keyMismatch": "Nah! Keys don't match. Remember that 'a' and 'A' are different for me. Check the pinned messages in the channel for more help.",
      "yohooman": "Yo Hooman! Imma look you up in the database, give me a sec"
 }

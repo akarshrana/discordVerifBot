@@ -9,7 +9,7 @@
   "author": "akarsh",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.2.0",
+    "discord.js": "^12.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "googleapis": "^39.2.0",

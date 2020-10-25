@@ -1,13 +1,11 @@
 const { Client } = require("discord.js");
 const { gClient, gClientAuthorize } = require('./google/gClient');
 const { gsrun } = require('./google/gsRun');
-
-const { config } = require("dotenv");
-config({ path: __dirname + "/.env" });
-
 const botCommands = require('./commands/botCommands');
-
-let data;
+const util = require('./utility');
+const { config } = require("dotenv");
+const reactChannelId = '752837945165348894';
+config({ path: __dirname + "/.env" });
 
 // Google Authorize + Load Data
 gClientAuthorize(gClient);
@@ -26,7 +24,7 @@ client.on("ready", () => {
 	client.user.setActivity('Fight Club', { type: "WATCHING" });
 });
 
-// Discord Bot Listen
+// Bot Listeners
 client.on("message", async message => {
 	if (!message.content.startsWith('!')) return;
 
@@ -41,10 +39,25 @@ client.on("message", async message => {
 	else if (command === 'addRole') message.member.reply('Nothing here check back later');
 	else if (command === "assign") botCommands.assignRole(message, args);
 	else if (command === "18EE") botCommands.ee18(message);
-	else {
-		message.member.send("Invalid command, please check the syntax and try again.");
+	else if (command === "sendMessage" && message.author.username === "a_crush") {
+		botCommands.sendMessage(client, message);
 	}
 });
+
+client.on("messageReactionAdd", (reaction, user) => {
+	if (reaction.message.channel.id === reactChannelId) {
+		console.log("Add");
+		util.handleReaction(reaction, user, true);
+	}
+})
+
+
+client.on("messageReactionRemove", (reaction, user) => {
+	if (reaction.message.channel.id === reactChannelId) {
+		console.log("Remove");
+		util.handleReaction(reaction, user, false);
+	}
+})
 
 // Discord Client Login
 client.login(process.env.TOKEN);

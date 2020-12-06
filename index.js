@@ -13,7 +13,7 @@ gClientAuthorize(gClient);
 	data = await gsrun(gClient);
 })();
 
-// Discord Client
+// Discord Client        
 const client = new Client({
 	disableEveryone: true
 });

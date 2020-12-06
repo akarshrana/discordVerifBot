@@ -1,5 +1,6 @@
 const { gsrun } = require('../google/gsRun');
 const messages = require('../data/messages.json');
+const roleIDs = require('../data/roleID.json');
 
 exports.refresh = async (gClient, message) => {
     console.log('Refresh Command...');
@@ -33,11 +34,27 @@ exports.verifyMember = async (message, data, args) => {
                 message.member.roles.add(roleIDs[yy + bb]);
             }
             else if (rollNumber[5] == 5) {
-                message.member.roles.add(roleIDs["msc" + yy]);
+                if (yy == "19")
+                    message.member.roles.add(roleIDs["msc19"]);
+                if (yy == "20")
+                    message.member.roles.add(roleIDs["msc20"]);
                 message.member.roles.add(roleIDs[bb]);
             }
             else if (rollNumber[5] == 6) {
-                message.member.roles.add(roleIDs["mt" + yy]);
+                if (yy == "19")
+                    message.member.roles.add(roleIDs["mt19"]);
+                if (yy == "20")
+                    message.member.roles.add(roleIDs["mt20"]);
+                if (bb == "CL")
+                    message.member.roles.add(roleIDs["mtseocs"]);
+                else if (bb == "CS" || bb == "EC" || bb == "PD" || bb == "PS")
+                    message.member.roles.add(roleIDs["mtses"]);
+                else if (bb == "SE" || bb == "TE" || bb == "EV" || bb == "WR" || bb == "GT")
+                    message.member.roles.add(roleIDs["mtsif"]);
+                else if (bb == "SD" || bb == "TS" || bb == "MF")
+                    message.member.roles.add(roleIDs["mtsms"]);
+                else if (bb == "MM")
+                    message.member.roles.add(roleIDs["mtsmmme"]);
                 // message.member.roles.add(roleIDs[bb]);
             }
             message.member.roles.add(roleIDs.member);

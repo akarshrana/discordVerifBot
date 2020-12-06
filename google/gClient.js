@@ -12,9 +12,9 @@ const keys = JSON.parse(keysEnvVar); // https://stackoverflow.com/questions/5733
 // );
 // console.log(keys);
 const googleClient = new google.auth.JWT(
-  keys.client_email,
+  keys.client_email, //email
   null,
-  keys.private_key,
+  keys.private_key, //key
   ['https://www.googleapis.com/auth/spreadsheets']
 );
 
